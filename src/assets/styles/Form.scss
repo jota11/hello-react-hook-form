@@ -1,0 +1,121 @@
+@media (max-width: 800px) {
+    #form {
+        width: 80% !important;
+    }
+}
+
+#form {
+    margin: 0 auto;
+    padding: 2vh;
+    background-color: #CCC;
+    color: #111;
+    width: 50%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s;
+
+    .form-field {
+        margin-bottom: 2vh;
+        width: 100%;
+        position: relative;
+
+        label {
+            pointer-events: none;
+            font-family: "Roboto", Arial, Helvetica, sans-serif;
+            position: absolute;
+            transition: 0.2s;
+        }
+
+        .required-message {
+            margin-left: 1vh;
+            font-size: 2vh;
+            font-weight: 500;
+            transition: 0.2s;
+            color: red;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &:focus-within {
+            label {
+                font-size: 1.8vh;
+                font-weight: 300;
+                top: 1vh;
+                left: 1vh;
+                letter-spacing: 0.1vh;
+                opacity: 1;
+            }
+
+            .required-message {
+                font-size: 1.5vh;
+                font-weight: 300;
+                letter-spacing: 0.2vh;
+            }
+        }
+    }
+
+    input {
+        background-color: #F7F7F7;
+        margin: 0;
+        padding: 3.8vh 2vh 2vh 2vh;
+        outline: 0;
+        border: 1px solid #0000; // transparent border to avoid bumping
+        font-family: "Roboto Cn", Arial, Helvetica, sans-serif;
+        font-size: 2.5vh;
+        width: 100%;
+        box-sizing: border-box;
+        transition: 0.2s;
+
+        &:focus {
+            background-color: #FFF;
+            box-shadow: 0px 0px 50px #0001;
+        }
+
+        // Instead of letting the placeholder empty, it's more "intuitive",
+        // and to avoid confusion, to hide it so it's still visible on HTML.
+        &::placeholder {
+            opacity: 0;
+        }
+        
+        // This trickery done did made the trick.
+        &:placeholder-shown ~ label {
+            font-size: 2.9vh;
+            font-weight: 500;
+            top: 35%;
+            left: 3vh;
+            opacity: 0.5;
+        }
+
+        &:not(:placeholder-shown) ~ label {
+            font-size: 1.8vh;
+            font-weight: 300;
+            top: 1vh;
+            left: 1vh;
+            letter-spacing: 0.1vh;
+            opacity: 1;
+
+            .required-message {
+                font-size: 1.5vh;
+                font-weight: 300;
+                letter-spacing: 0.2vh;
+            }
+        }
+    }
+
+    input[type=submit] {
+        background-color: #111;
+        margin: 2vh auto;
+        padding: 2vh;
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        color: #EEE;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+            background-color: #222;
+        }
+    }
+}
