@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/hello-react-hook-form/static/css/main.6b8763e6.css",
-    "main.js": "/hello-react-hook-form/static/js/main.46ecef31.js",
+    "main.js": "/hello-react-hook-form/static/js/main.081baec5.js",
     "static/media/circle.svg": "/hello-react-hook-form/static/media/circle.b2b89b17e1503494f5fc.svg",
     "index.html": "/hello-react-hook-form/index.html",
     "main.6b8763e6.css.map": "/hello-react-hook-form/static/css/main.6b8763e6.css.map",
-    "main.46ecef31.js.map": "/hello-react-hook-form/static/js/main.46ecef31.js.map"
+    "main.081baec5.js.map": "/hello-react-hook-form/static/js/main.081baec5.js.map"
   },
   "entrypoints": [
     "static/css/main.6b8763e6.css",
-    "static/js/main.46ecef31.js"
+    "static/js/main.081baec5.js"
   ]
 }
